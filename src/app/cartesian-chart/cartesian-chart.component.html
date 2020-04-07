@@ -1,0 +1,35 @@
+<ejs-chart id='chart'>
+    <e-series-collection>
+             <e-series [dataSource]='chartData' type='Area' xName='x' yName='y' name='England'
+             fill='url(#gradient-chart)'></e-series>
+         </e-series-collection>
+ </ejs-chart>
+ 
+ <style>
+ #gradient-chart {
+ stop-color: #169CD4;
+ }
+ #gradient-chart stop {
+ stop-color: rgb(22, 156, 212);
+ }
+ 
+ #gradient-chart stop[offset="0"] {
+ stop-opacity: 0.75;
+ stop-color:#169CD4;
+ }
+ 
+ #gradient-chart stop[offset="1"] {
+ stop-opacity: 0;
+ stop-color: #169CD4;
+ }
+ </style>
+ 
+ <svg style="height: auto;">
+ <defs>
+ <linearGradient id="gradient-chart" x1="0" x2="0" y1="0" y2="1" style="background-color: #169CD4;">
+ <stop offset="0" />
+ <stop offset="1" />
+ </linearGradient>
+ </defs>
+ </svg> 
+ 
